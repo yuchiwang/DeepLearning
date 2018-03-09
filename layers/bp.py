@@ -2,11 +2,10 @@
 # -*- coding: UTF-8 -*-
 
 import random
-import math
+import numpy as np
 
-# sigmoid激活函数
-def sigmoid(x):
-    return 1.0 / (1 + math.exp(-x))
+def sigmoid(inX):
+    return 1.0 / (1 + np.exp(-inX))
 
 # 梯度校验
 def gradient_check(network, sample_feature, sample_label):
